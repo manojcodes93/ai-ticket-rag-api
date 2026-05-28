@@ -1,8 +1,13 @@
 import pickle
 from sentence_transformers import SentenceTransformer, util
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+EMBEDDINGS_PATH = BASE_DIR / "models" / "embeddings.pkl"
 
 # Load embeddings
-with open("model/embeddings.pkl", "rb") as f:
+with open(EMBEDDINGS_PATH, "rb") as f:
     data = pickle.load(f)
 
 tickets = data["tickets"]

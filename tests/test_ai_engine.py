@@ -1,9 +1,8 @@
-from model.ai_engine import solve_ticket
+from app.services.ai_engine import solve_ticket
 
 test_cases = [
 
     # Printer Tests
-    "Printer login issue",
     "Printer Login issue",
     "Printer not working",
     "Install printer",
