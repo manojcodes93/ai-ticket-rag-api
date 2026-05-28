@@ -1,18 +1,18 @@
 import pickle
-from model.retrieval import retrieve_solution
+from app.services.retrieval import retrieve_solution
 from groq import Groq
 import os
 from dotenv import load_dotenv
-from model.spell_checker import correct_spelling
-from model.classifier import classify_ticket, is_query_too_short
+from app.services.spell_checker import correct_spelling
+from app.services.classifier import classify_ticket, is_query_too_short
 
 load_dotenv()
 
 # Load classifier
-model = pickle.load(open("model/model.pkl", "rb"))
+model = pickle.load(open("app/models/model.pkl", "rb"))
 
 # Load vectorizer
-vectorizer = pickle.load(open("model/vectorizer.pkl", "rb"))
+vectorizer = pickle.load(open("app/models/vectorizer.pkl", "rb"))
 
 # Spell checker
 

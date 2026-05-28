@@ -68,7 +68,7 @@ print(classification_report(y_test, y_pred))
 
 print("Saving model...")
 
-pickle.dump(model, open("model/model.pkl", "wb"))
-pickle.dump(vectorizer, open("model/vectorizer.pkl", "wb"))
+pickle.dump(model, open("app/models/model.pkl", "wb"))
+pickle.dump(vectorizer, open("app/models/vectorizer.pkl", "wb"))
 
 print("Model saved successfully!")
